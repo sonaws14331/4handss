@@ -1,0 +1,37 @@
+{
+  "name": "amber-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "node server/index.js",
+    "build": "vite build",
+    "start": "NODE_ENV=production node server/index.js",
+    "admin:create": "node scripts/create-admin.js",
+    "contract:compile": "node scripts/compile-contract.js",
+    "contract:deploy": "node scripts/deploy-contract.js",
+    "test": "node --test --test-concurrency=1 tests/*.test.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.6.1",
+    "ethers": "6.17.0",
+    "express": "5.2.1",
+    "express-rate-limit": "8.7.0",
+    "helmet": "8.1.0",
+    "lucide": "0.468.0"
+  },
+  "devDependencies": {
+    "hardhat": "3.18.0",
+    "prettier": "3.9.9",
+    "solc": "0.8.37",
+    "vite": "8.3.1"
+  },
+  "overrides": {
+    "solc": {
+      "tmp": "0.2.7"
+    }
+  }
+}
