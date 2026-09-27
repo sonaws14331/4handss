@@ -52,7 +52,7 @@ if (production) {
 const port = Number(process.env.PORT) || 3000;
 const server = app.listen(port, "0.0.0.0", () =>
   console.log(
-    `AMBER ready on port ${port} (${production ? "production" : "development"})`,
+    `BIMZI ready on port ${port} (${production ? "production" : "development"})`,
   ),
 );
 async function shutdown() {

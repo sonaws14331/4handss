@@ -24,14 +24,14 @@ const provider = new JsonRpcProvider(BSC_RPC_URL);
 const network = await provider.getNetwork();
 if (![56n, 97n].includes(network.chainId))
   throw new Error("Expected BSC mainnet (56) or testnet (97).");
-if (network.chainId === 56n && CONFIRM_MAINNET !== "AMBER-1B")
+if (network.chainId === 56n && CONFIRM_MAINNET !== "BIMZI-1B")
   throw new Error(
-    "Mainnet costs real BNB. Review the contract, owner and supply, then explicitly set CONFIRM_MAINNET=AMBER-1B.",
+    "Mainnet costs real BNB. Review the contract, owner and supply, then explicitly set CONFIRM_MAINNET=BIMZI-1B.",
   );
 const signer = new Wallet(DEPLOYER_PRIVATE_KEY, provider);
 const artifact = compile();
 console.log(
-  `Deploying AMBER with 1,000,000,000 AMBR to treasury ${owner} on chain ${network.chainId}.`,
+  `Deploying BIMZI with 1,000,000,000 BIMZI to treasury ${owner} on chain ${network.chainId}.`,
 );
 const contract = await new ContractFactory(
   artifact.abi,

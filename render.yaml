@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: amber-platform
+    name: bimzi-platform
     runtime: node
     plan: free
     buildCommand: npm ci && npm run build

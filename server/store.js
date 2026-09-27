@@ -1,19 +1,25 @@
 import { DatabaseSync } from "node:sqlite";
-import { mkdirSync, chmodSync } from "node:fs";
+import { mkdirSync, chmodSync, existsSync } from "node:fs";
 import path from "node:path";
 import { randomBytes, scrypt, timingSafeEqual, createHash } from "node:crypto";
 import { promisify } from "node:util";
 const derive = promisify(scrypt);
 export const defaults = {
-  announcement: "The next chapter starts with us.",
+  announcement: "A little weird. Better together.",
   contractAddress: "",
+  contractIdentity: "",
   communityUrl: "",
   tokenOwner: "",
   network: "testnet",
 };
 export function openStore(directory = process.env.DATA_DIR || "./data") {
   mkdirSync(directory, { recursive: true, mode: 0o700 });
-  const filename = path.join(directory, "amber.sqlite");
+  // Reuse the existing database on upgrades, including its WAL and credentials.
+  // Fresh installations use a brand-independent filename.
+  const legacy = path.join(directory, "amber.sqlite");
+  const current = path.join(directory, "platform.sqlite");
+  const filename =
+    existsSync(current) || !existsSync(legacy) ? current : legacy;
   const db = new DatabaseSync(filename);
   chmodSync(filename, 0o600);
   db.exec(`PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000;

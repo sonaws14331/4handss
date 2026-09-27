@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "AMBER — AMBR Ecosystem",
-  "short_name": "AMBER",
-  "description": "The AMBER community on BNB Smart Chain.",
+  "name": "BIMZI — BIMZI Ecosystem",
+  "short_name": "BIMZI",
+  "description": "The BIMZI community on BNB Smart Chain.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f8f9fb",
-  "theme_color": "#f8f9fb",
+  "background_color": "#f6f5fa",
+  "theme_color": "#f6f5fa",
   "icons": [
     {
       "src": "./icon-192.png",

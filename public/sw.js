@@ -1,6 +1,6 @@
 // The Vite build replaces this marker whenever the app bundle changes.
 const ROOT = new URL("./", self.location).pathname;
-const PREFIX = `amber-shell:${ROOT}:`;
+const PREFIX = `bimzi-shell:${ROOT}:`;
 const CACHE = `${PREFIX}__BUILD_VERSION__`;
 async function cacheShell(response) {
   if (!response.ok) return;
@@ -38,7 +38,12 @@ self.addEventListener("activate", (event) => {
       const keys = await caches.keys();
       await Promise.all(
         keys
-          .filter((key) => key.startsWith(PREFIX) && key !== CACHE)
+          .filter(
+            (key) =>
+              (key.startsWith(PREFIX) ||
+                key.startsWith(`amber-shell:${ROOT}:`)) &&
+              key !== CACHE,
+          )
           .map((key) => caches.delete(key)),
       );
       await self.clients.claim();
