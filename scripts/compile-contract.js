@@ -10,8 +10,8 @@ export function compile() {
   const input = {
     language: "Solidity",
     sources: {
-      "AMBER.sol": {
-        content: readFileSync(path.join(root, "contracts/AMBER.sol"), "utf8"),
+      "BIMZI.sol": {
+        content: readFileSync(path.join(root, "contracts/BIMZI.sol"), "utf8"),
       },
     },
     settings: {
@@ -41,9 +41,9 @@ export function compile() {
   const errors = result.errors?.filter((e) => e.severity === "error") || [];
   if (errors.length)
     throw new Error(errors.map((e) => e.formattedMessage).join("\n"));
-  const contract = result.contracts["AMBER.sol"].AMBER;
+  const contract = result.contracts["BIMZI.sol"].BIMZI;
   return {
-    contractName: "AMBER",
+    contractName: "BIMZI",
     compiler: solc.version(),
     abi: contract.abi,
     bytecode: `0x${contract.evm.bytecode.object}`,
@@ -53,8 +53,8 @@ export function compile() {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   mkdirSync(path.join(root, "artifacts"), { recursive: true });
   writeFileSync(
-    path.join(root, "artifacts/AMBER.json"),
+    path.join(root, "artifacts/BIMZI.json"),
     JSON.stringify(compile(), null, 2),
   );
-  console.log("AMBER compiled successfully: artifacts/AMBER.json");
+  console.log("BIMZI compiled successfully: artifacts/BIMZI.json");
 }

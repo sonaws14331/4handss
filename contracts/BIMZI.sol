@@ -6,12 +6,12 @@ import {ERC20Pausable} from "@openzeppelin/contracts/token/ERC20/extensions/ERC2
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {Ownable2Step} from "@openzeppelin/contracts/access/Ownable2Step.sol";
 
-/// @title AMBER (AMBR) — a fixed-supply BEP-20 compatible community token
+/// @title BIMZI (BIMZI) — a fixed-supply BEP-20 compatible community token
 /// @notice The owner can pause all transfers. There is no additional minting or transfer tax.
-contract AMBER is ERC20Pausable, Ownable2Step {
+contract BIMZI is ERC20Pausable, Ownable2Step {
     uint256 public constant INITIAL_SUPPLY = 1_000_000_000 * 10 ** 18;
 
-    constructor(address treasury) ERC20("AMBER", "AMBR") Ownable(treasury) {
+    constructor(address treasury) ERC20("BIMZI", "BIMZI") Ownable(treasury) {
         _mint(treasury, INITIAL_SUPPLY);
     }
 

@@ -2,10 +2,10 @@
 :root {
   font-family: "DM Sans", sans-serif;
   color: #25272d;
-  background: #f8f9fb;
+  background: #f6f5fa;
   font-synthesis: none;
   --muted: #92949d;
-  --amber: #f3b63e;
+  --bimzi: #9c71f3;
   --green: #239d79;
   --line: #edf0f3;
   --side: 226px;
@@ -51,12 +51,12 @@ button {
 }
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid #c88b19;
+  outline: 3px solid #744ac8;
   outline-offset: 4px;
 }
 input:focus,
 select:focus {
-  outline: 2px solid #efb743;
+  outline: 2px solid #9c73ef;
   outline-offset: 1px;
 }
 svg.lucide {
@@ -114,33 +114,9 @@ button:hover {
   letter-spacing: 1px;
 }
 .brand-mark {
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 33px;
-  height: 35px;
-  font-size: 36px;
-  color: #eaaa2b;
-  font-weight: 800;
-  line-height: 1;
-  transform: skew(-7deg);
-}
-.brand-mark span {
-  position: absolute;
-  width: 14px;
-  height: 5px;
-  background: #fff;
-  right: 1px;
-  bottom: 10px;
-  transform: rotate(-37deg);
-}
-.brand-dot {
-  font-family: Arial;
-  font-size: 9px;
-  align-self: flex-start;
-  padding-top: 6px;
-  margin-left: -8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
 }
 .workspace-label {
   font-size: 9px;
@@ -165,13 +141,13 @@ button:hover {
   white-space: nowrap;
 }
 .nav-item.active {
-  background: #fff5df;
-  color: #a86e0b;
+  background: #f0e8ff;
+  color: #5d37a8;
   font-weight: 700;
 }
 .nav-item:hover {
   background: #faf7ef;
-  color: #a86e0b;
+  color: #5d37a8;
 }
 .nav-item .tiny {
   width: 13px;
@@ -180,9 +156,9 @@ button:hover {
   color: #9b9da6;
 }
 .nav-new {
-  background: #fff2d4;
+  background: #eae0ff;
   font-size: 8px;
-  color: #b68122;
+  color: #6f4bb6;
   letter-spacing: 0.5px;
   border-radius: 4px;
   padding: 3px 5px;
@@ -213,7 +189,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #bf871f;
+  color: #724cbf;
   margin-bottom: 12px;
 }
 .app-promo-icon svg {
@@ -327,7 +303,7 @@ button:hover {
   position: absolute;
   top: 4px;
   right: 7px;
-  background: #e7aa38;
+  background: #9369e7;
   border: 2px solid white;
   width: 7px;
   height: 7px;
@@ -342,8 +318,8 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f6bb49;
-  border: 1px solid #efb442;
+  background: #a379f6;
+  border: 1px solid #9c72ef;
   font-size: 11px;
   font-weight: 650;
   border-radius: 6px;
@@ -393,8 +369,8 @@ main {
 }
 .hero {
   height: 302px;
-  background: linear-gradient(105deg, #fff0c7 0%, #ffedbe 46%, #f7d692 100%);
-  border: 1px solid #f3dfb0;
+  background: linear-gradient(105deg, #e4d7ff 0%, #e0d0ff 46%, #c7aef7 100%);
+  border: 1px solid #d3c3f3;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -406,8 +382,8 @@ main {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(#d29e3a0c 1px, transparent 1px),
-    linear-gradient(90deg, #d29e3a0c 1px, transparent 1px);
+    linear-gradient(#8965d20c 1px, transparent 1px),
+    linear-gradient(90deg, #8965d20c 1px, transparent 1px);
   background-size: 34px 34px;
   mask-image: linear-gradient(90deg, transparent, #000);
 }
@@ -419,7 +395,7 @@ main {
   font-size: 8px;
   letter-spacing: 1.4px;
   font-weight: 700;
-  color: #8b6b32;
+  color: #604b8b;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -427,7 +403,7 @@ main {
 .hero-eyebrow > span {
   width: 5px;
   height: 5px;
-  background: #ac7b25;
+  background: #6b4bac;
   border-radius: 50%;
 }
 .hero h2 {
@@ -438,12 +414,12 @@ main {
   margin-top: 13px;
 }
 .hero h2 span {
-  color: #a97922;
+  color: #6848a9;
 }
 .hero p {
   font-size: 10px;
   line-height: 1.9;
-  color: #8c7a57;
+  color: #73668c;
   margin-top: 12px;
 }
 .hero-buttons {
@@ -471,10 +447,10 @@ main {
   background: #292a29;
   color: white;
 }
-.amber {
-  background: #f2b73e;
+.bimzi {
+  background: #9c70f2;
   color: #2c2b27;
-  border: 1px solid #eeb23b;
+  border: 1px solid #986dee;
 }
 .outline {
   border: 1px solid #e5e7eb;
@@ -486,7 +462,7 @@ main {
   align-items: center;
   font-size: 10px;
   font-weight: 600;
-  color: #74613e;
+  color: #5a4d74;
 }
 .hero-learn svg {
   width: 13px;
@@ -496,16 +472,16 @@ main {
   align-items: center;
   gap: 8px;
   font-size: 8px;
-  color: #99825a;
+  color: #7b6c99;
   margin-top: 18px;
 }
 .hero-footnote > span {
   font-size: 15px;
-  color: #b08332;
+  color: #7455b0;
 }
 .hero-footnote b {
   font-size: 5px;
-  color: #b49a68;
+  color: #907db4;
 }
 .hero-art {
   position: absolute;
@@ -521,19 +497,19 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #a86a17;
+  color: #6240a8;
   background: linear-gradient(
     125deg,
-    #fff0ac,
-    #e9a735 48%,
-    #ffcf64 70%,
-    #bb791d
+    #d7c3ff,
+    #9367e9 48%,
+    #b58fff 70%,
+    #6f49bb
   );
   box-shadow:
-    7px 10px 0 #b57923,
-    10px 15px 0 #cd902b,
-    18px 26px 35px #ae762239;
-  border: 2px solid #f9dc88;
+    7px 10px 0 #6f4cb5,
+    10px 15px 0 #7f58cd,
+    18px 26px 35px #6b49ae39;
+  border: 2px solid #c3a8f9;
 }
 .coin-front {
   width: 202px;
@@ -544,48 +520,55 @@ main {
   z-index: 3;
 }
 .coin-rim {
-  border: 2px dashed #ca8b2b;
+  border: 2px dashed #7e58ca;
   border-radius: 50%;
   width: 91%;
   height: 91%;
   box-shadow:
-    inset 1px 2px 4px #fff3b3,
-    0 0 0 3px #ffdb76;
+    inset 1px 2px 4px #dbc8ff,
+    0 0 0 3px #bd9cff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #ffda70, #f3b345 65%, #ffc957);
+  background: linear-gradient(145deg, #ba98ff, #9f76f3 65%, #ae86ff);
   position: relative;
 }
 .coin-rim:before {
   content: "";
   position: absolute;
   inset: 13px;
-  border: 1px solid #be80223d;
+  border: 1px solid #734ebe3d;
   border-radius: 50%;
 }
-.coin-letter {
-  font-family: Arial, sans-serif;
-  font-size: 115px;
-  line-height: 1;
-  font-weight: 900;
+.coin-face {
+  width: 108px;
+  height: 90px;
   position: relative;
-  text-shadow:
-    2px 3px 1px #ffe293,
-    -2px -2px 1px #9c651b;
-  color: #b97921;
-  transform: skew(-8deg);
-  padding-right: 5px;
 }
-.coin-letter span {
+.face-eye {
   position: absolute;
-  right: 3px;
-  bottom: 30px;
-  width: 36px;
-  height: 12px;
-  transform: rotate(-29deg);
-  background: #f4b848;
+  width: 15px;
+  height: 23px;
+  border-radius: 50%;
+  background: #34245b;
+  top: 14px;
+}
+.eye-left {
+  left: 23px;
+}
+.eye-right {
+  right: 23px;
+}
+.face-smile {
+  position: absolute;
+  width: 49px;
+  height: 26px;
+  border: 7px solid #34245b;
+  border-top: 0;
+  border-radius: 0 0 40px 40px;
+  left: 30px;
+  top: 49px;
 }
 .coin-top {
   font-size: 6px;
@@ -608,16 +591,16 @@ main {
   font-size: 68px;
   font-weight: 800;
   box-shadow:
-    4px 5px 0 #bb8325,
-    7px 10px 0 #dda03a,
-    12px 20px 25px #b17a2e26;
-  border: 8px double #f7d67c;
-  background: linear-gradient(120deg, #ffe291, #e6aa3e);
-  color: #c58b28;
+    4px 5px 0 #734fbb,
+    7px 10px 0 #8f68dd,
+    12px 20px 25px #7253b126;
+  border: 8px double #bc9ef7;
+  background: linear-gradient(120deg, #cab0ff, #956de6);
+  color: #7a54c5;
   opacity: 0.9;
 }
 .orbit {
-  border: 1px solid #c3964624;
+  border: 1px solid #8769c324;
   border-radius: 50%;
   position: absolute;
   transform: rotate(-25deg);
@@ -636,7 +619,7 @@ main {
 }
 .floating-star {
   position: absolute;
-  color: #b2802d;
+  color: #7252b2;
   font-size: 28px;
 }
 .star-one {
@@ -654,14 +637,14 @@ main {
   background: #fff8e6cf;
   border: 1px solid #fffbec;
   border-radius: 6px;
-  box-shadow: 0 7px 20px #a67b2710;
+  box-shadow: 0 7px 20px #694ba610;
   backdrop-filter: blur(8px);
   font-size: 8px;
   display: flex;
   align-items: center;
   gap: 6px;
   padding: 9px 11px;
-  color: #8e763f;
+  color: #68558e;
   z-index: 4;
   transform: rotate(-6deg);
 }
@@ -670,7 +653,7 @@ main {
   top: 25px;
 }
 .chip-top .status-dot {
-  background: #b18e40;
+  background: #7b60b1;
   width: 4px;
   height: 4px;
 }
@@ -692,7 +675,7 @@ main {
   font-size: 9px;
 }
 .market-context > span {
-  color: #a48240;
+  color: #745ca4;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -772,7 +755,7 @@ main {
   height: 10px;
 }
 .neutral-badge {
-  color: #a57e2c;
+  color: #6b4ea5;
   background: #fbf5e7;
 }
 .stat-bottom small {
@@ -826,12 +809,12 @@ main {
   font-weight: 700;
   flex-shrink: 0;
 }
-.token.amber {
-  background: #f8b936;
-  border: 2px solid #f9d275;
-  color: #fff2c8;
+.token.bimzi {
+  background: #9b6cf8;
+  border: 2px solid #ba9af9;
+  color: #e5d7ff;
   font-style: italic;
-  text-shadow: 1px 1px #b98626;
+  text-shadow: 1px 1px #724fb9;
 }
 .token.gold {
   background: #fff8df;
@@ -904,8 +887,8 @@ main {
   border-radius: 4px;
 }
 .periods .selected {
-  color: #b48529;
-  background: #fff4dd;
+  color: #7150b4;
+  background: #efe7ff;
 }
 .chart-panel {
   min-width: 0;
@@ -945,7 +928,7 @@ main {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #efb446;
+  background: #9e75ef;
 }
 .quick-swap .panel-heading {
   padding: 20px 19px 17px;
@@ -1014,7 +997,10 @@ main {
   font-weight: 600;
 }
 .swap-token .bnb-mini {
-  font-size: 18px;
+  color: #eab02c;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
 }
 .swap-token .token {
   width: 16px;
@@ -1032,7 +1018,7 @@ main {
 }
 .swap-fiat button {
   font-size: 7px;
-  color: #b88c35;
+  color: #795ab8;
   font-weight: 700;
   padding: 0;
 }
@@ -1120,8 +1106,8 @@ main {
   white-space: nowrap;
 }
 .tabs button.selected {
-  color: #b18427;
-  border-color: #eeb743;
+  color: #6f4eb1;
+  border-color: #9c73ee;
 }
 .tabs button svg {
   width: 12px;
@@ -1210,10 +1196,10 @@ td:last-child {
   height: 12px;
 }
 .favorite.saved {
-  color: #db9b26;
+  color: #8459db;
 }
 .favorite.saved svg {
-  fill: #f9df9a;
+  fill: #cbb5f9;
 }
 .asset-cell {
   display: flex;
@@ -1234,7 +1220,7 @@ td:last-child {
 }
 .asset-tag {
   font-size: 7px;
-  color: #b38a3c;
+  color: #7a5db3;
   background: #fff8e8;
   border-radius: 3px;
   padding: 3px 4px;
@@ -1296,7 +1282,7 @@ td:last-child {
   align-items: center;
   gap: 4px;
   font-size: 9px;
-  color: #b18228;
+  color: #6f4eb1;
   margin-top: 11px;
   font-weight: 500;
 }
@@ -1316,7 +1302,7 @@ td:last-child {
 }
 .peach {
   background: #fff6e4;
-  color: #d3a443;
+  color: #8e6bd3;
 }
 .pale {
   background: #f1f4ef;
@@ -1325,9 +1311,9 @@ td:last-child {
 .mini-donut {
   width: 62px;
   height: 62px;
-  border: 12px solid #f8dc9c;
-  border-right-color: #f0b83e;
-  border-bottom-color: #fdf1d9;
+  border: 12px solid #ccb6f8;
+  border-right-color: #9b70f0;
+  border-bottom-color: #ece3fd;
   border-radius: 50%;
   transform: rotate(-30deg);
   margin-left: auto;
@@ -1386,9 +1372,9 @@ footer button {
   justify-content: center;
   width: 56px;
   height: 56px;
-  background: #fff6df;
+  background: #f0e8ff;
   border-radius: 16px;
-  color: #c8932c;
+  color: #7d58c8;
   margin: 0 auto 20px;
 }
 .empty-icon svg {
@@ -1421,12 +1407,12 @@ footer button {
 }
 .note {
   padding: 15px;
-  border: 1px solid #f3e5c9;
+  border: 1px solid #dfd5f3;
   background: #fffbef;
   border-radius: 7px;
   font-size: 11px;
   line-height: 1.8;
-  color: #a08851;
+  color: #7a67a0;
   margin-top: 20px;
 }
 .tokenomics-grid {
@@ -1443,7 +1429,7 @@ footer button {
   height: 235px;
   border-radius: 50%;
   padding: 27px;
-  background: conic-gradient(#eab346 0 65%, #f8d484 65% 85%, #fff0cf 85% 100%);
+  background: conic-gradient(#9b74ea 0 65%, #c0a4f8 65% 85%, #e8dcff 85% 100%);
   margin: 0 auto 28px;
 }
 .large-donut > div {
@@ -1468,7 +1454,7 @@ footer button {
 }
 .large-donut span {
   font-size: 11px;
-  color: #b6882b;
+  color: #7352b6;
 }
 .token-supply h2 {
   font-size: 20px;
@@ -1508,7 +1494,7 @@ footer button {
 .eyebrow {
   font-size: 9px;
   letter-spacing: 1.5px;
-  color: #b1873c;
+  color: #795db1;
 }
 .document h2 {
   font-size: 26px;
@@ -1540,7 +1526,7 @@ footer button {
 }
 .roadmap span {
   display: block;
-  color: #c69a44;
+  color: #8868c6;
   font-size: 12px;
   margin-bottom: 12px;
 }
@@ -1607,7 +1593,7 @@ form > label select {
 .form-result {
   font-size: 11px;
   margin: 13px 0;
-  color: #a77b27;
+  color: #6a4ba7;
 }
 .admin-panel .button {
   margin-top: 5px;
@@ -1625,9 +1611,9 @@ form > label select {
   left: calc(50% + var(--side) / 2);
   transform: translate(-50%, 20px);
   padding: 13px 20px;
-  border: 1px solid #49463b;
+  border: 1px solid #423f49;
   background: #292d32;
-  color: #ffedc5;
+  color: #e3d5ff;
   box-shadow: 0 5px 25px #0002;
   border-radius: 8px;
   font-size: 12px;
@@ -1707,7 +1693,116 @@ dialog > .token {
   font-weight: 700;
 }
 .preview-amount svg {
-  color: #d7a442;
+  color: #8f6cd7;
+}
+
+/* BIMZI identity: violet, mint and a friendly orbital mascot. */
+:root {
+  --bimzi: #7750dc;
+  --mint: #bdffcf;
+}
+.hero {
+  background: radial-gradient(
+    ellipse at 88% 10%,
+    #6c4eab 0%,
+    #37275d 48%,
+    #251d3d 100%
+  );
+  border-color: #58417e;
+  color: #fff;
+  border-radius: 22px;
+}
+.hero-grid {
+  background-image:
+    linear-gradient(#ffffff08 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+}
+.hero-eyebrow,
+.hero h2 span {
+  color: #bdffcf;
+}
+.hero-eyebrow > span {
+  background: #bdffcf;
+}
+.hero p {
+  color: #dfd6ed;
+}
+.hero-learn,
+.hero-footnote,
+.hero-footnote > span,
+.hero-footnote b {
+  color: #d6c9eb;
+}
+.hero .dark {
+  background: #bdffcf;
+  color: #251d3d;
+  border-radius: 20px;
+}
+.wallet-button,
+.button.bimzi {
+  background: #7750dc;
+  border-color: #7750dc;
+  color: #fff;
+}
+.coin {
+  background: linear-gradient(
+    125deg,
+    #ddffe6,
+    #8ddeae 48%,
+    #c5ffdd 70%,
+    #5bae88
+  );
+  border-color: #dbffe8;
+  box-shadow:
+    7px 10px 0 #458f77,
+    10px 15px 0 #367560,
+    18px 26px 35px #120b2c55;
+  color: #34245b;
+}
+.coin-rim {
+  background: linear-gradient(145deg, #d3ffe0, #99e5bc 65%, #baffd6);
+  border-color: #68b891;
+  box-shadow:
+    inset 1px 2px 4px #effff4,
+    0 0 0 3px #b8fbd1;
+}
+.coin-rim:before {
+  border-color: #55987544;
+}
+.coin-back {
+  background: linear-gradient(120deg, #b79bf5, #7750dc);
+  color: #f0e8ff;
+  border-color: #ceb6ff;
+  box-shadow:
+    4px 5px 0 #63409e,
+    7px 10px 0 #4b2e7c,
+    12px 20px 25px #120b2c44;
+}
+.orbit {
+  border-color: #d4c3ef30;
+}
+.floating-star {
+  color: #c6ffdb;
+}
+.art-chip {
+  background: #f4eeffeb;
+  border-color: #ffffff80;
+  color: #453462;
+  box-shadow: 0 7px 20px #170d2d22;
+}
+.token.bimzi {
+  background: #7750dc;
+  color: #e3ffd9;
+  border-color: #b39ae5;
+  font-style: normal;
+  text-shadow: none;
+}
+.app-promo {
+  background: linear-gradient(135deg, #f1eaff, #eafff1);
+  border-color: #e4d9f4;
+}
+.app-promo-icon {
+  color: #7750dc;
 }
 @media (min-width: 1500px) {
   :root {
@@ -1730,8 +1825,8 @@ dialog > .token {
     width: 230px;
     height: 230px;
   }
-  .coin-letter {
-    font-size: 130px;
+  .coin-face {
+    transform: scale(1.13);
   }
   .stat-card {
     padding: 21px;
@@ -1806,8 +1901,8 @@ dialog > .token {
     left: 27%;
     top: 53px;
   }
-  .coin-letter {
-    font-size: 95px;
+  .coin-face {
+    transform: scale(0.83);
   }
   .coin-back {
     left: 5%;
@@ -1901,13 +1996,8 @@ dialog > .token {
     top: 82px;
     left: 15%;
   }
-  .coin-letter {
-    font-size: 75px;
-  }
-  .coin-letter span {
-    width: 25px;
-    height: 8px;
-    bottom: 22px;
+  .coin-face {
+    transform: scale(0.65);
   }
   .coin-top,
   .coin-bottom {
@@ -2089,8 +2179,9 @@ dialog > .token {
   .hero-art {
     width: 170px;
     right: -32px;
-    top: 100px;
-    opacity: 0.7;
+    top: 150px;
+    opacity: 0.9;
+    z-index: 1;
   }
   .coin-front {
     width: 122px;
@@ -2098,8 +2189,8 @@ dialog > .token {
     left: 20px;
     top: 38px;
   }
-  .coin-letter {
-    font-size: 68px;
+  .coin-face {
+    transform: scale(0.59);
   }
   .coin-back {
     width: 65px;

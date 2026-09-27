@@ -9,7 +9,7 @@ import {
 } from "ethers";
 import { compile } from "../scripts/compile-contract.js";
 
-test("AMBR fixed supply, transfers, owner authorization and safe ownership transitions", async () => {
+test("BIMZI fixed supply, transfers, owner authorization and safe ownership transitions", async () => {
   const hre = await createHardhatRuntimeEnvironment({
     networks: {
       test: { type: "edr-simulated", chainType: "l1", hardfork: "shanghai" },
@@ -30,8 +30,8 @@ test("AMBR fixed supply, transfers, owner authorization and safe ownership trans
     await assert.rejects(() => factory.deploy(ZeroAddress));
     const token = await factory.deploy(ownerAddress);
     await token.waitForDeployment();
-    assert.equal(await token.name(), "AMBER");
-    assert.equal(await token.symbol(), "AMBR");
+    assert.equal(await token.name(), "BIMZI");
+    assert.equal(await token.symbol(), "BIMZI");
     assert.equal(await token.decimals(), 18n);
     const total = parseEther("1000000000");
     assert.equal(await token.totalSupply(), total);

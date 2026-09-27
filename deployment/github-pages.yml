@@ -1,4 +1,4 @@
-name: Publish AMBER public website
+name: Publish BIMZI public website
 on:
   workflow_dispatch:
 permissions:

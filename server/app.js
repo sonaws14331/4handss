@@ -57,7 +57,7 @@ export async function createApp(db, { production = false, origin = "" } = {}) {
   );
   app.use(express.json({ limit: "8kb" }));
   const fakeHash = await passwordHash(randomBytes(32).toString("hex"));
-  const cookieName = production ? "__Host-amber_session" : "amber_session";
+  const cookieName = production ? "__Host-bimzi_session" : "bimzi_session";
   const cookieOptions = {
     httpOnly: true,
     secure: production,
@@ -173,8 +173,14 @@ export async function createApp(db, { production = false, origin = "" } = {}) {
     res.clearCookie(cookieName, cookieOptions).json({ ok: true });
   });
   app.put("/api/admin/settings", (req, res) => {
-    const { announcement, communityUrl, contractAddress, tokenOwner, network } =
-      req.body || {};
+    const {
+      announcement,
+      communityUrl,
+      contractAddress,
+      contractIdentity,
+      tokenOwner,
+      network,
+    } = req.body || {};
     if (
       typeof announcement !== "string" ||
       !announcement.trim() ||
@@ -215,7 +221,18 @@ export async function createApp(db, { production = false, origin = "" } = {}) {
         error: "Enter valid non-zero BSC addresses, or leave them empty.",
       });
     }
+    if (
+      contractIdentity !== undefined &&
+      !["", "BIMZI"].includes(contractIdentity)
+    )
+      return res
+        .status(400)
+        .json({ error: "Select an unconfirmed or BIMZI contract identity." });
     const settings = {
+      contractIdentity:
+        addresses.contractAddress && contractIdentity === "BIMZI"
+          ? "BIMZI"
+          : "",
       announcement: announcement.trim(),
       communityUrl,
       ...addresses,

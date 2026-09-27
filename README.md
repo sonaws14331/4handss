@@ -1,6 +1,6 @@
-# AMBER · AMBR
+# BIMZI · BIMZI
 
-An original exchange-inspired website, installable mobile web app, protected admin backend and fixed-supply BSC token contract. AMBER is independent of KuCoin and does not use its identity or assets.
+An original exchange-inspired website, installable mobile web app, protected admin backend and fixed-supply BSC token contract. BIMZI is independent of KuCoin and does not use its identity or assets.
 
 **Current status:** pre-launch software. Market prices, charts, volumes and swaps are labeled simulations. No token is deployed by installing or running this app. No deposit, custodial exchange, staking pool, real order execution or guaranteed return is provided.
 
@@ -19,7 +19,7 @@ Open `http://localhost:3000`. Use `/#admin` for the admin area. Create an accoun
 npm run admin:create
 ```
 
-Enter a username. A random password is displayed once in your terminal. Save it privately. There is no public default password. Passwords are stored with salted scrypt; session tokens are hashed in SQLite. Accounts and settings live in `data/amber.sqlite`, excluded from Git.
+Enter a username. A random password is displayed once in your terminal. Save it privately. There is no public default password. Passwords are stored with salted scrypt; session tokens are hashed in SQLite. Accounts and settings live in `data/platform.sqlite`, excluded from Git.
 
 To rotate a password, use `RESET_ADMIN=yes npm run admin:create` with the existing username. This revokes its sessions. Alternatively set `ADMIN_USERNAME` and `ADMIN_PASSWORD` privately for noninteractive provisioning. Passwords must be 14–256 characters. Do not put secrets in source files, shell history or public build variables.
 
@@ -45,14 +45,14 @@ The inactive `deployment/github-pages.yml` template can publish the public websi
 
 ## Mobile app
 
-AMBER includes a manifest, 192/512px icons, offline app-shell caching and responsive layouts. On an HTTPS deployment use Chrome's Install app option, or Safari → Share → Add to Home Screen. This is a progressive web app, not an APK, IPA or store-published native app. A first online visit is required for offline assets; wallet and admin functions always require online services.
+BIMZI includes a manifest, 192/512px icons, offline app-shell caching and responsive layouts. On an HTTPS deployment use Chrome's Install app option, or Safari → Share → Add to Home Screen. This is a progressive web app, not an APK, IPA or store-published native app. A first online visit is required for offline assets; wallet and admin functions always require online services.
 
 ## BSC contract
 
-`contracts/AMBER.sol` uses OpenZeppelin 5.6.1:
+`contracts/BIMZI.sol` uses OpenZeppelin 5.6.1:
 
-- Name **AMBER**, symbol **AMBR**, 18 decimals.
-- Fixed **1,000,000,000 AMBR**, minted once to the chosen treasury/owner.
+- Name **BIMZI**, symbol **BIMZI**, 18 decimals.
+- Fixed **1,000,000,000 BIMZI**, minted once to the chosen treasury/owner.
 - No additional minting, transfer tax, holder confiscation or blacklist.
 - The owner can pause/unpause **all transfers** and propose a new owner; the new owner must accept.
 - Ownership can be renounced only when unpaused, preventing permanent freezing through renunciation.
@@ -71,7 +71,7 @@ For deployment, set these privately in the process environment: `BSC_RPC_URL`, `
 npm run contract:deploy
 ```
 
-Mainnet additionally requires `CONFIRM_MAINNET=AMBER-1B`. Actual deployment incurs network fees. First test on BSC testnet, review the treasury address, verify source on BscScan and obtain an independent contract review. Local tests and an automated code review are not a smart-contract audit. There is no live deployment transaction or contract address included in this repository.
+Mainnet additionally requires `CONFIRM_MAINNET=BIMZI-1B`. Actual deployment incurs network fees. First test on BSC testnet, review the treasury address, verify source on BscScan and obtain an independent contract review. Local tests and an automated code review are not a smart-contract audit. There is no live deployment transaction or contract address included in this repository.
 
 After deployment, publish the verified address and owner in the admin panel. Token controls can be used by connecting the actual owner wallet to a verified contract interface (e.g. BscScan's Write Contract). Contract ownership is not transferred by changing website metadata. To make the token tradable, a separate owner-approved liquidity transaction and funding are required. This project does not promise financial profit or a KuCoin listing.
 
@@ -84,3 +84,15 @@ npm run contract:compile
 ```
 
 Node may print an experimental SQLite warning. Hardhat runs contract tests in an isolated local EVM. Tests do not contact a live blockchain or spend funds.
+
+## BIMZI rebrand
+
+BIMZI (pronounced **bim-zee**) uses the ticker **BIMZI**, a violet-and-mint identity and a smiling coin mascot. The website, installable app, admin interface and undeployed token contract share this identity.
+
+On September 27, 2026, the public [CoinGecko search API](https://api.coingecko.com/api/v3/search?query=BIMZI) returned no coins and the [DexScreener search API](https://api.dexscreener.com/latest/dex/search?q=BIMZI) returned no pairs for BIMZI. This is a limited name check, not a guarantee of worldwide availability, trademark clearance or future listing approval. No CoinMarketCap or exchange-listing approval is claimed.
+
+### Updating an existing installation
+
+Keep the existing `DATA_DIR`: older installations continue using their existing `amber.sqlite` database, including admin accounts and settings, when `platform.sqlite` is absent. An existing `platform.sqlite` takes precedence; fresh installations use that filename. Do not move or delete SQLite files while the server is running. Cookies have a new name, so administrators must sign in again with their existing password. Existing browser favorites are carried forward; the old token favorite becomes BIMZI. The new service worker clears older app-shell caches for this app's path after activation. Close and reopen installed app windows to activate an available update.
+
+Custom announcements, community URLs and contract addresses are retained. Legacy addresses are hidden from public token details until an administrator verifies the deployed name and symbol on the selected network, selects the BIMZI contract identity and saves. Editing an address or network clears the form’s confirmation. This is an administrator assertion, not automated on-chain verification. Review these settings when changing the public brand. If you independently deployed an older token, this source update does not rename its on-chain identity: deploy and verify the new contract separately, then publish the correct address. No live token has been deployed by this project.

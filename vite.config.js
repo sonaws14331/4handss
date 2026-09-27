@@ -7,7 +7,7 @@ export default defineConfig({
   build: { target: "es2022" },
   plugins: [
     {
-      name: "version-amber-service-worker",
+      name: "version-bimzi-service-worker",
       async writeBundle(options, bundle) {
         const hash = createHash("sha256");
         for (const filename of Object.keys(bundle).sort()) {
